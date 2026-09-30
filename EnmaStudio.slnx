@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Enma.Cli/Enma.Cli.csproj" />
+    <Project Path="src/Enma/Enma.csproj" />
+    <Project Path="src/EnmaStudio/EnmaStudio.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Enma.Tests/Enma.Tests.csproj" />
+  </Folder>
+</Solution>

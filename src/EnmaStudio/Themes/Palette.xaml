@@ -1,0 +1,115 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:c="clr-namespace:EnmaStudio">
+
+    <!-- Fonts -->
+    <FontFamily x:Key="Ui.Font">Verdana</FontFamily>
+    <FontFamily x:Key="Ui.IconFont">Segoe MDL2 Assets</FontFamily>
+    <sys:Double x:Key="Ui.FontSize">11</sys:Double>
+
+    <!-- Window frame (outside -> inside) -->
+    <SolidColorBrush x:Key="Ui.Outline" Color="#0C0C0C"/>
+    <SolidColorBrush x:Key="Ui.Frame.Light" Color="#3C3C3C"/>
+    <SolidColorBrush x:Key="Ui.Frame.Mid" Color="#282828"/>
+
+    <!-- Surfaces -->
+    <SolidColorBrush x:Key="Ui.Black" Color="#000000"/>
+    <SolidColorBrush x:Key="Ui.Line" Color="#303030"/>
+    <SolidColorBrush x:Key="Ui.TabBg" Color="#0C0C0C"/>
+    <SolidColorBrush x:Key="Ui.GroupBg" Color="#171717"/>
+    <SolidColorBrush x:Key="Ui.PopupBg" Color="#232323"/>
+    <SolidColorBrush x:Key="Ui.PopupHover" Color="#1B1B1B"/>
+    <SolidColorBrush x:Key="Ui.Input" Color="#191919"/>
+    <SolidColorBrush x:Key="Ui.ScrollTrack" Color="#121212"/>
+    <SolidColorBrush x:Key="Ui.ScrollThumb.Fill" Color="#3E3E3E"/>
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="Ui.Text" Color="#CDCDCD"/>
+    <SolidColorBrush x:Key="Ui.TextMuted" Color="#999999"/>
+    <SolidColorBrush x:Key="Ui.TextDisabled" Color="#5C5C5C"/>
+    <SolidColorBrush x:Key="Ui.TextBind" Color="#727272"/>
+    <SolidColorBrush x:Key="Ui.TextError" Color="#E8404A"/>
+
+    <!-- Tab icons -->
+    <SolidColorBrush x:Key="Ui.Icon" Color="#5A5A5A"/>
+    <SolidColorBrush x:Key="Ui.Icon.Hover" Color="#B4B4B4"/>
+    <SolidColorBrush x:Key="Ui.Icon.Active" Color="#D2D2D2"/>
+
+    <!-- Control fills -->
+    <LinearGradientBrush x:Key="Ui.Check.Off" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#4B4B4B"/>
+        <GradientStop Offset="1" Color="#333333"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Check.Hover" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#575757"/>
+        <GradientStop Offset="1" Color="#3D3D3D"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Slider.Track" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#343434"/>
+        <GradientStop Offset="1" Color="#444444"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Combo" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#1F1F1F"/>
+        <GradientStop Offset="1" Color="#242424"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Combo.Hover" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#252525"/>
+        <GradientStop Offset="1" Color="#2B2B2B"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Button" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#232323"/>
+        <GradientStop Offset="1" Color="#1A1A1A"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Button.Hover" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#2B2B2B"/>
+        <GradientStop Offset="1" Color="#202020"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Ui.Button.Pressed" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#1A1A1A"/>
+        <GradientStop Offset="1" Color="#232323"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Ui.Button.Inner" Color="#323232"/>
+
+    <!-- The gradient strip across the top of the window -->
+    <LinearGradientBrush x:Key="Ui.Rainbow" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#37B1DA"/>
+        <GradientStop Offset="0.5" Color="#C954C0"/>
+        <GradientStop Offset="1" Color="#CCE336"/>
+    </LinearGradientBrush>
+
+    <!-- Color picker helpers -->
+    <DrawingBrush x:Key="Ui.Checker" TileMode="Tile" Viewport="0,0,6,6" ViewportUnits="Absolute">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="#9A9A9A" Geometry="M0,0 H6 V6 H0 Z"/>
+                <GeometryDrawing Brush="#5A5A5A" Geometry="M0,0 H3 V3 H0 Z M3,3 H6 V6 H3 Z"/>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <LinearGradientBrush x:Key="Ui.HueStrip" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#FF0000"/>
+        <GradientStop Offset="0.1667" Color="#FFFF00"/>
+        <GradientStop Offset="0.3333" Color="#00FF00"/>
+        <GradientStop Offset="0.5" Color="#00FFFF"/>
+        <GradientStop Offset="0.6667" Color="#0000FF"/>
+        <GradientStop Offset="0.8333" Color="#FF00FF"/>
+        <GradientStop Offset="1" Color="#FF0000"/>
+    </LinearGradientBrush>
+
+    <!--
+        Accent resources. Reference these with
+        DynamicResource so they can be swapped at runtime.
+    -->
+    <SolidColorBrush x:Key="Ui.Accent" Color="#E0457B"/>    <LinearGradientBrush x:Key="Ui.Accent.Gradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#E0457B"/>
+        <GradientStop Offset="1" Color="#8E2449"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Ui.Pattern" Color="#141414"/>
+    <ScaleTransform x:Key="Ui.Scale" ScaleX="1" ScaleY="1"/>
+
+    <!-- Converters -->
+    <c:InverseBoolConverter x:Key="Ui.InverseBool"/>
+    <BooleanToVisibilityConverter x:Key="Ui.BoolToVis"/>
+
+</ResourceDictionary>

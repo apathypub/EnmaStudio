@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Enma</RootNamespace>
+    <Version>0.1.0</Version>
+    <Description>Enma: a small brace-style scripting language that compiles to Lua 5.2, with a MoonSharp runtime.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MoonSharp" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>

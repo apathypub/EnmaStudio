@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+artifacts/
+*.user
+.vs/
+.vscode/
+.idea/
+TestResults/
+
+# Never commit keys or personal data
+*.key
+.env
+.env.*
+profiles.json
+evals.json
+eval_history.jsonl
+eval_runs/
+dataset_*.jsonl
+workspace.txt

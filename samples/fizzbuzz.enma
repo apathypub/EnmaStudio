@@ -1,0 +1,16 @@
+// Classic FizzBuzz with a map of rules.
+const RULES = [{n: 3, word: "Fizz"}, {n: 5, word: "Buzz"}]
+
+fn say(i) {
+    let out = ""
+    for rule in RULES {
+        if i % rule.n == 0 { out ++= rule.word }
+    }
+    return out == "" ? tostring(i) : out
+}
+
+let line = []
+for i in 1..=15 {
+    line[#line + 1] = say(i)
+}
+log(table.concat(line, " "))

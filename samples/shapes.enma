@@ -1,0 +1,31 @@
+// Classes, inheritance and methods.
+class Shape {
+    fn init(name) { self.name = name }
+    fn area() => 0
+    fn describe() => "{self.name} with area {math.round(self:area(), 2)}"
+}
+
+class Circle : Shape {
+    fn init(r) {
+        Shape.init(self, "circle")
+        self.r = r
+    }
+    fn area() => math.pi * self.r ** 2
+}
+
+class Rect : Shape {
+    fn init(w, h) {
+        Shape.init(self, "rectangle")
+        self.w = w
+        self.h = h
+    }
+    fn area() => self.w * self.h
+}
+
+let shapes = [Circle(1.5), Rect(2, 3), Circle(0.5)]
+let total = 0
+for shape in shapes {
+    log(shape:describe())
+    total += shape:area()
+}
+log("total area: {math.round(total, 2)}")

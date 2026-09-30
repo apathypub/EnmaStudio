@@ -1,0 +1,18 @@
+// Ticks and timers. "on tick" keeps the program running until you press Stop (Shift+F5).
+let ticks = 0
+on tick { ticks += 1 }
+
+let reports = 0
+let report = nil
+report = timer.every(1, fn() {
+    reports += 1
+    log("{time.format('HH:mm:ss')}  {ticks} ticks")
+    if reports == 3 {
+        report:cancel()
+        log("stopping")
+    }
+})
+
+after 0.5 { log("half a second in") }
+
+on unload { log("bye after {ticks} ticks") }

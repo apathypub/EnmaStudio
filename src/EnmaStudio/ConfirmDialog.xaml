@@ -1,0 +1,51 @@
+<Window x:Class="EnmaStudio.ConfirmDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Enma Studio"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        Topmost="True"
+        Background="{StaticResource Ui.Outline}"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True"
+        TextOptions.TextFormattingMode="Display"
+        FontFamily="{StaticResource Ui.Font}"
+        FontSize="{StaticResource Ui.FontSize}"
+        Foreground="{StaticResource Ui.Text}">
+
+    <Border Width="330" LayoutTransform="{DynamicResource Ui.Scale}"
+            BorderBrush="{StaticResource Ui.Outline}" BorderThickness="1">
+        <Border BorderBrush="{StaticResource Ui.Frame.Light}" BorderThickness="1">
+            <Border BorderBrush="{StaticResource Ui.Frame.Mid}" BorderThickness="4">
+                <Border BorderBrush="{StaticResource Ui.Frame.Light}" BorderThickness="1">
+                    <Grid Background="{StaticResource Ui.Black}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" Background="{StaticResource Ui.Rainbow}"/>
+                        <Border Grid.Row="1" Background="{StaticResource Ui.Rainbow}" Opacity="0.5"/>
+
+                        <Grid Grid.Row="2" Background="{DynamicResource Ui.Pattern}">
+                            <GroupBox x:Name="Box" Margin="14">
+                                <StackPanel>
+                                    <TextBlock x:Name="MessageText" Margin="20,4,30,12" TextWrapping="Wrap"/>
+                                    <UniformGrid Rows="1" Margin="14,0,24,2">
+                                        <Button x:Name="YesButton" Margin="6,0" IsDefault="True" Click="Yes_Click"/>
+                                        <Button x:Name="NoButton" Margin="6,0" Click="No_Click"/>
+                                        <Button x:Name="CancelButton" Margin="6,0" Visibility="Collapsed" Click="Cancel_Click"/>
+                                    </UniformGrid>
+                                </StackPanel>
+                            </GroupBox>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Border>
+        </Border>
+    </Border>
+</Window>

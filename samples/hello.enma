@@ -1,0 +1,17 @@
+// A first look at Enma. Press F5 to run; the output appears below.
+let name = "Enma"
+let langs = ["Lua", "Enma", "C#"]
+
+log("hello from {name}!")
+
+for i, lang in langs {
+    log("{i}. {lang}{lang == name ? '  <- this one' : ''}")
+}
+
+fn greet(who = "world") => "hi, {who}"
+log(greet())
+log(greet("you"))
+
+// Pipes pass the left side as the first argument.
+fn shout(text) => text:upper() ++ "!"
+log("done" |> shout)

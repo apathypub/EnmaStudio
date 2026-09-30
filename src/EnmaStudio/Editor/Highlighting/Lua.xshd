@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name="Lua" extensions=".lua" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Comment" foreground="#6A9955" />
+  <Color name="String" foreground="#CE9178" />
+  <Color name="Number" foreground="#B5CEA8" />
+  <Color name="Keyword" foreground="#C586C0" />
+  <Color name="Constant" foreground="#569CD6" />
+  <Color name="Builtin" foreground="#DCDCAA" />
+  <Color name="Api" foreground="#4EC9B0" />
+
+  <RuleSet>
+    <Span color="Comment" multiline="true" begin="--\[=*\[" end="\]=*\]" />
+    <Span color="Comment" begin="--" />
+    <Span color="String" multiline="true" begin="\[=*\[" end="\]=*\]" />
+    <Span color="String">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+    <Span color="String">
+      <Begin>'</Begin>
+      <End>'</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+
+    <Keywords color="Keyword">
+      <Word>and</Word><Word>break</Word><Word>do</Word><Word>else</Word><Word>elseif</Word><Word>end</Word>
+      <Word>for</Word><Word>function</Word><Word>goto</Word><Word>if</Word><Word>in</Word><Word>local</Word>
+      <Word>not</Word><Word>or</Word><Word>repeat</Word><Word>return</Word><Word>then</Word><Word>until</Word>
+      <Word>while</Word>
+    </Keywords>
+    <Keywords color="Constant">
+      <Word>nil</Word><Word>true</Word><Word>false</Word><Word>self</Word>
+    </Keywords>
+    <Keywords color="Builtin">
+      <Word>print</Word><Word>pairs</Word><Word>ipairs</Word><Word>next</Word><Word>type</Word><Word>tostring</Word>
+      <Word>tonumber</Word><Word>select</Word><Word>error</Word><Word>assert</Word><Word>pcall</Word><Word>xpcall</Word>
+      <Word>setmetatable</Word><Word>getmetatable</Word><Word>rawget</Word><Word>rawset</Word><Word>rawequal</Word>
+      <Word>rawlen</Word><Word>unpack</Word><Word>require</Word><Word>load</Word><Word>string</Word><Word>table</Word>
+      <Word>math</Word><Word>os</Word><Word>coroutine</Word><Word>utf8</Word><Word>bit32</Word>
+    </Keywords>
+    <!-- Runtime API -->
+    <Keywords color="Api">
+      <Word>log</Word><Word>clock</Word><Word>on_tick</Word><Word>on_unload</Word><Word>timer</Word>
+      <Word>time</Word><Word>json</Word><Word>script</Word>
+    </Keywords>
+    <Rule color="Number">\b0[xX][0-9a-fA-F]+\b|\b\d+(\.\d+)?([eE][+-]?\d+)?\b</Rule>
+  </RuleSet>
+</SyntaxDefinition>
